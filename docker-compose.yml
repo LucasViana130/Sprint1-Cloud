@@ -1,0 +1,20 @@
+services:
+  api:
+    build: .
+    container_name: sprint1-cloud-api
+    ports:
+      - "8080:8080"
+    depends_on:
+      - h2db
+
+  h2db:
+    image: oscarfonts/h2
+    container_name: h2db
+    ports:
+      - "9092:9092"
+      - "81:81"
+    volumes:
+      - h2-data:/opt/h2-data
+
+volumes:
+  h2-data:
