@@ -1,0 +1,84 @@
+package br.com.fiap.petjourney.controllers;
+
+import br.com.fiap.petjourney.dtos.request.AppointmentRequest;
+import br.com.fiap.petjourney.dtos.response.AppointmentResponse;
+import br.com.fiap.petjourney.services.AppointmentService;
+import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.tags.Tag;
+import jakarta.validation.Valid;
+import lombok.RequiredArgsConstructor;
+import org.springframework.data.domain.Page;
+import org.springdoc.core.annotations.ParameterObject;
+import org.springframework.data.domain.Pageable;
+import org.springframework.data.web.PageableDefault;
+import org.springframework.format.annotation.DateTimeFormat;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.*;
+
+import java.time.LocalDateTime;
+
+import static org.springframework.hateoas.server.mvc.WebMvcLinkBuilder.linkTo;
+import static org.springframework.hateoas.server.mvc.WebMvcLinkBuilder.methodOn;
+
+@RestController
+@RequestMapping("/appointments")
+@RequiredArgsConstructor
+@Tag(name = "Agendamento", description = "Endpoints para agendamentos de consultas")
+public class AppointmentController {
+
+    private final AppointmentService service;
+
+    @GetMapping("/pet/{petId}")
+    @Operation(summary = "Listar agendamentos de um pet com paginação")
+    public ResponseEntity<Page<AppointmentResponse>> getByPetId(
+            @PathVariable Long petId,
+            @PageableDefault(size = 10) @ParameterObject Pageable pageable) {
+        Page<AppointmentResponse> appointments = service.findByPetId(petId, pageable);
+        appointments.forEach(app -> app.add(linkTo(methodOn(AppointmentController.class).getById(app.getId())).withSelfRel()));
+        return ResponseEntity.ok(appointments);
+    }
+
+    @GetMapping("/{id}")
+    @Operation(summary = "Buscar agendamento por ID")
+    public ResponseEntity<AppointmentResponse> getById(@PathVariable Long id) {
+        AppointmentResponse app = service.findById(id);
+        app.add(linkTo(methodOn(AppointmentController.class).getById(id)).withSelfRel());
+        app.add(linkTo(methodOn(AppointmentController.class).getByPetId(0L, Pageable.unpaged())).withRel("by-pet"));
+        return ResponseEntity.ok(app);
+    }
+
+    @GetMapping("/search")
+    @Operation(summary = "Buscar agendamentos por intervalo de data")
+    public ResponseEntity<Page<AppointmentResponse>> getByDateRange(
+            @RequestParam @DateTimeFormat(iso = DateTimeFormat.ISO.DATE_TIME) LocalDateTime start,
+            @RequestParam @DateTimeFormat(iso = DateTimeFormat.ISO.DATE_TIME) LocalDateTime end,
+            @PageableDefault(size = 10) @ParameterObject Pageable pageable) {
+        Page<AppointmentResponse> appointments = service.findByDateRange(start, end, pageable);
+        appointments.forEach(app -> app.add(linkTo(methodOn(AppointmentController.class).getById(app.getId())).withSelfRel()));
+        return ResponseEntity.ok(appointments);
+    }
+
+    @PostMapping
+    @Operation(summary = "Criar novo agendamento")
+    public ResponseEntity<AppointmentResponse> create(@RequestBody @Valid AppointmentRequest request) {
+        AppointmentResponse app = service.create(request);
+        app.add(linkTo(methodOn(AppointmentController.class).getById(app.getId())).withSelfRel());
+        return ResponseEntity.status(HttpStatus.CREATED).body(app);
+    }
+
+    @PutMapping("/{id}")
+    @Operation(summary = "Atualizar agendamento (incluindo status)")
+    public ResponseEntity<AppointmentResponse> update(@PathVariable Long id, @RequestBody @Valid AppointmentRequest request) {
+        AppointmentResponse app = service.update(id, request);
+        app.add(linkTo(methodOn(AppointmentController.class).getById(id)).withSelfRel());
+        return ResponseEntity.ok(app);
+    }
+
+    @DeleteMapping("/{id}")
+    @Operation(summary = "Excluir agendamento")
+    public ResponseEntity<Void> delete(@PathVariable Long id) {
+        service.delete(id);
+        return ResponseEntity.noContent().build();
+    }
+}
