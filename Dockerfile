@@ -6,8 +6,8 @@ COPY target/*.jar app.jar
 
 RUN useradd -m springuser
 
-USER springuser
+RUN mkdir -p /app/data && chown -R springuser:springuser /app/data
 
-EXPOSE 8080
+USER springuser
 
 ENTRYPOINT ["java", "-jar", "app.jar"]
