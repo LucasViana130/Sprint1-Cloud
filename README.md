@@ -1,4 +1,3 @@
-````markdown
 # ☁️ PetJourney Cloud
 
 Projeto desenvolvido para a disciplina de Cloud Computing utilizando Java Spring Boot, Docker e Microsoft Azure.
@@ -277,4 +276,4 @@ Adicionar link do vídeo após upload no YouTube.
 ✅ Projeto pronto para entrega
 
 ```
-```
+
