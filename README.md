@@ -14,7 +14,7 @@ A aplicação foi containerizada utilizando Docker e publicada em uma máquina v
 
 # 👨‍💻 Tecnologias Utilizadas
 
-- Java 21
+- Java 17
 - Spring Boot 3
 - Spring Data JPA
 - Spring HATEOAS
@@ -75,7 +75,7 @@ Sprint1-Cloud
 
 # 🐳 Dockerfile
 
-O projeto utiliza um Dockerfile baseado em Java 21.
+O projeto utiliza um Dockerfile baseado em Java 17.
 
 ## Principais funções:
 
@@ -147,35 +147,31 @@ A documentação da API pode ser acessada em:
 http://IP_DA_VM:8080/swagger-ui/index.html
 ```
 
-Exemplo:
+Exemplo local:
 
 ```bash
-http://4.206.208.16:8080/swagger-ui/index.html
+http://localhost:8080/swagger-ui/index.html
 ```
 
 ---
 
 # 🧪 Funcionalidades da API
 
-## Clínica
+## Clínica e Veterinários
 
-* Criar clínica
-* Buscar clínica por ID
-* Listar clínicas
-* Atualizar clínica
-* Excluir clínica
+* Crud completo
 
 ## Tutor
 
-* CRUD de tutores
+* Apenas GET de tutores
 
 ## Pet
 
-* CRUD de pets
+* Apenas GET de pets
 
-## Agendamento
+## Agendamento e Prontuário
 
-* CRUD de compromissos
+* CRUD de compromissos e de Prontuários
 
 ---
 
@@ -219,15 +215,6 @@ O projeto contém scripts automatizados para:
 
 ---
 
-# 🔐 Segurança Aplicada
-
-* Usuário não-root no container
-* Containers isolados
-* VM Linux dedicada
-* Porta específica liberada
-
----
-
 # 📸 Evidências
 
 O projeto possui evidências completas contendo:
@@ -253,27 +240,6 @@ O projeto possui evidências completas contendo:
 
 ---
 
-# 🔗 Repositório GitHub
-
-https://github.com/LucasViana130/Sprint1-Cloud
-
----
-
 # 🎥 Vídeo Demonstrativo
 
 Adicionar link do vídeo após upload no YouTube.
-
----
-
-# ✅ Status do Projeto
-
-✅ API funcionando em Cloud
-✅ Deploy realizado na Azure
-✅ Docker funcionando
-✅ Swagger publicado
-✅ Persistência implementada
-✅ Scripts Azure CLI implementados
-✅ Projeto pronto para entrega
-
-```
-
