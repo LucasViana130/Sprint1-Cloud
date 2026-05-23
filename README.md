@@ -24,7 +24,7 @@ A aplicação foi containerizada utilizando Docker e publicada em uma máquina v
 
 # 👨‍💻 Tecnologias Utilizadas
 
-- Java 17
+- Java 21
 - Spring Boot 3
 - Spring Data JPA
 - Spring HATEOAS
@@ -85,7 +85,7 @@ Sprint1-Cloud
 
 # 🐳 Dockerfile
 
-O projeto utiliza um Dockerfile baseado em Java 17.
+O projeto utiliza um Dockerfile baseado em Java 21.
 
 ## Principais funções:
 
