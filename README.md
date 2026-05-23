@@ -242,4 +242,4 @@ O projeto possui evidências completas contendo:
 
 # 🎥 Vídeo Demonstrativo
 
-Adicionar link do vídeo após upload no YouTube.
+https://www.youtube.com/watch?v=rRf5zXidzAE
