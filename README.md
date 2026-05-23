@@ -4,6 +4,16 @@ Projeto desenvolvido para a disciplina de Cloud Computing utilizando Java Spring
 
 ---
 
+# 👨‍🎓 Integrantes
+
+| Nome                        | RM       |
+| --------------------------- | -------- |
+| Deryk de Souza Queiroz      | RM563412 |
+| Lucas Gonçalves Viana       | RM563254 |
+| Vinicius Paschoeto da Silva | RM563089 |
+
+---
+
 # 📌 Sobre o Projeto
 
 O **PetJourney Cloud** é uma API REST responsável pelo gerenciamento do módulo clínico do sistema PetJourney.
@@ -227,16 +237,6 @@ O projeto possui evidências completas contendo:
 * Testes da API
 * Persistência do banco
 * Remoção da infraestrutura
-
----
-
-# 👨‍🎓 Integrantes
-
-| Nome                        | RM       |
-| --------------------------- | -------- |
-| Deryk de Souza Queiroz      | RM563412 |
-| Lucas Gonçalves Viana       | RM563254 |
-| Vinicius Paschoeto da Silva | RM563089 |
 
 ---
 
