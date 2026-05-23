@@ -1,55 +1,64 @@
-PetJourney Cloud ☁️🐾
-📌 Sobre o Projeto
+````markdown
+# ☁️ PetJourney Cloud
 
-O PetJourney Cloud é uma API REST desenvolvida com Java 21 + Spring Boot, criada para gerenciamento do módulo clínico do sistema PetJourney.
+Projeto desenvolvido para a disciplina de Cloud Computing utilizando Java Spring Boot, Docker e Microsoft Azure.
 
-O projeto foi preparado para execução em ambiente cloud utilizando:
+---
 
-Docker
-Docker Compose
-Máquina Virtual Microsoft Azure
-Swagger/OpenAPI
-Persistência de dados
-Deploy em infraestrutura Linux
-👨‍💻 Tecnologias Utilizadas
-Java 21
-Spring Boot 3
-Spring Data JPA
-Spring HATEOAS
-Maven
-H2 Database
-Docker
-Docker Compose
-Microsoft Azure
-Swagger OpenAPI
-☁️ Arquitetura da Solução
-Infraestrutura
+# 📌 Sobre o Projeto
 
-A aplicação foi publicada em uma máquina virtual Linux hospedada no Microsoft Azure.
+O **PetJourney Cloud** é uma API REST responsável pelo gerenciamento do módulo clínico do sistema PetJourney.
 
-Componentes utilizados:
-Máquina Virtual Linux (Azure VM)
-Docker Engine
-Docker Compose
-API Spring Boot
-Volume Docker para persistência
-Banco H2 persistente
-🏗️ Diagrama da Arquitetura
+A aplicação foi containerizada utilizando Docker e publicada em uma máquina virtual Linux hospedada na Microsoft Azure.
 
-O projeto contém:
+---
 
-arquitetura.drawio
-arquitetura.png
+# 👨‍💻 Tecnologias Utilizadas
 
-Representando:
+- Java 21
+- Spring Boot 3
+- Spring Data JPA
+- Spring HATEOAS
+- Maven
+- Docker
+- Docker Compose
+- Microsoft Azure
+- H2 Database
+- Swagger OpenAPI
 
-Usuário acessando Swagger
-Azure VM
-Docker
-API Spring Boot
-Volume persistente
-Banco H2
-📂 Estrutura do Projeto
+---
+
+# ☁️ Infraestrutura Cloud
+
+A aplicação foi publicada em:
+
+| Serviço | Descrição |
+|---|---|
+| Cloud Provider | Microsoft Azure |
+| VM | Linux AlmaLinux 10 |
+| Containerização | Docker |
+| Orquestração | Docker Compose |
+| Banco de Dados | H2 |
+| Persistência | Docker Volume |
+
+---
+
+# 🏗️ Arquitetura da Solução
+
+## Fluxo da aplicação
+
+1. Usuário acessa Swagger
+2. Requisição chega na VM Azure
+3. Docker executa a API Spring Boot
+4. API processa os endpoints REST
+5. Dados são persistidos em volume Docker
+6. Banco H2 armazena os dados
+
+---
+
+# 📂 Estrutura do Projeto
+
+```bash
 Sprint1-Cloud
 │
 ├── src/
@@ -59,77 +68,123 @@ Sprint1-Cloud
 ├── DADOS_TESTE.sql
 ├── arquitetura.drawio
 ├── arquitetura.png
-🐳 Dockerfile
+├── scripts/
+└── README.md
+````
 
-O projeto utiliza um Dockerfile baseado em:
+---
 
-FROM eclipse-temurin:21-jdk
+# 🐳 Dockerfile
 
-Funções:
+O projeto utiliza um Dockerfile baseado em Java 21.
 
-Criação da imagem da API
-Execução isolada da aplicação
-Configuração do usuário não-root
-Execução do JAR Spring Boot
-🐳 Docker Compose
+## Principais funções:
 
-O docker-compose.yml realiza:
+* Criação da imagem Docker
+* Execução da API Spring Boot
+* Utilização de usuário não-root
+* Persistência de dados
 
-Build automático da aplicação
-Criação do container da API
-Exposição da porta 8080
-Criação de volume persistente
-☁️ Deploy Azure
-Máquina Virtual
-Configuração	Valor
-Cloud Provider	Microsoft Azure
-Sistema Operacional	AlmaLinux 10
-Região	Canada Central
-VM Size	Standard_B2ats_v2
-Porta liberada	8080
-Acesso remoto	SSH
-🔓 Configuração de Rede
+---
 
-Foi criada uma regra no NSG (Network Security Group) liberando:
+# 🐳 Docker Compose
 
-Porta	Protocolo
-8080	TCP
+O Docker Compose realiza:
 
-Permitindo acesso externo ao Swagger e à API.
+* Build automático da aplicação
+* Exposição da porta 8080
+* Criação do container da API
+* Persistência via volume Docker
 
-🚀 Como Executar Localmente
-1. Clonar repositório
+---
+
+# 🚀 Como Executar Localmente
+
+## 1) Clonar repositório
+
+```bash
 git clone https://github.com/LucasViana130/Sprint1-Cloud.git
-2. Entrar na pasta
+```
+
+---
+
+## 2) Entrar na pasta
+
+```bash
 cd Sprint1-Cloud
-3. Executar containers
+```
+
+---
+
+## 3) Gerar build da aplicação
+
+```bash
+mvn clean package
+```
+
+---
+
+## 4) Executar containers
+
+```bash
 docker compose up -d --build
-4. Verificar containers
+```
+
+---
+
+## 5) Verificar containers
+
+```bash
 docker ps
-📚 Swagger/OpenAPI
+```
+
+---
+
+# 📚 Swagger/OpenAPI
 
 A documentação da API pode ser acessada em:
 
+```bash
 http://IP_DA_VM:8080/swagger-ui/index.html
+```
 
 Exemplo:
 
+```bash
 http://4.206.208.16:8080/swagger-ui/index.html
-📌 Funcionalidades da API
-Clínica
-Criar clínica
-Buscar clínica por ID
-Listar clínicas
-Atualizar clínica
-Excluir clínica
-Tutor
-CRUD de tutores
-Pet
-CRUD de pets
-Agendamento
-CRUD de compromissos
-📄 Exemplo de JSON
-Criar Clínica
+```
+
+---
+
+# 🧪 Funcionalidades da API
+
+## Clínica
+
+* Criar clínica
+* Buscar clínica por ID
+* Listar clínicas
+* Atualizar clínica
+* Excluir clínica
+
+## Tutor
+
+* CRUD de tutores
+
+## Pet
+
+* CRUD de pets
+
+## Agendamento
+
+* CRUD de compromissos
+
+---
+
+# 📄 Exemplo de JSON
+
+## Criar Clínica
+
+```json
 {
   "name": "Clínica Veterinária Pet Feliz",
   "cnpj": "11222333000181",
@@ -137,62 +192,89 @@ Criar Clínica
   "email": "contato@petfeliz.com.br",
   "address": "Rua das Flores, 123 - São Paulo/SP"
 }
-🧪 Testes Realizados
-Testes no Swagger
+```
 
-Foram realizados testes de:
+---
 
-POST
-GET
-PUT
-DELETE
+# 💾 Persistência dos Dados
 
-Todos executados diretamente pela interface Swagger publicada na Azure VM.
+A aplicação utiliza Docker Volume para persistência do banco H2.
 
-📸 Evidências
+## Volume criado
 
-O projeto contém evidências completas da execução:
-
-Criação da VM
-Configuração da rede
-Clone do projeto
-Instalação Docker
-Build da aplicação
-Containers em execução
-Swagger funcionando
-Testes da API
-
-Arquivo:
-
-Evidencias_PetJourney_Cloud.docx
-💾 Persistência dos Dados
-
-A aplicação utiliza:
-
-Docker Volume
-
-Para persistência do banco H2.
-
-Volume criado:
-
+```bash
 h2-data
-🔐 Segurança Aplicada
-Usuário não-root no container Docker
-Containers isolados
-Porta específica liberada
-VM Linux dedicada
-📦 Build da Aplicação
+```
 
-Gerar JAR:
+---
 
-mvn clean package
-🖥️ Comandos Utilizados na VM
-Instalação Docker
-sudo dnf install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin -y
-Inicializar Docker
-sudo systemctl enable docker
-sudo systemctl start docker
-Clone do Projeto
-git clone https://github.com/LucasViana130/Sprint1-Cloud.git
-Executar aplicação
-sudo docker compose up -d --build
+# 🖥️ Scripts Azure CLI
+
+O projeto contém scripts automatizados para:
+
+* Reconhecimento de ambiente Azure
+* Deploy da VM
+* Configuração Docker
+* Monitoramento
+* Remoção da infraestrutura
+
+---
+
+# 🔐 Segurança Aplicada
+
+* Usuário não-root no container
+* Containers isolados
+* VM Linux dedicada
+* Porta específica liberada
+
+---
+
+# 📸 Evidências
+
+O projeto possui evidências completas contendo:
+
+* Criação da VM
+* Configuração de rede
+* Deploy Docker
+* Containers em execução
+* Swagger funcionando
+* Testes da API
+* Persistência do banco
+* Remoção da infraestrutura
+
+---
+
+# 👨‍🎓 Integrantes
+
+| Nome                        | RM       |
+| --------------------------- | -------- |
+| Deryk de Souza Queiroz      | RM563412 |
+| Lucas Gonçalves Viana       | RM563254 |
+| Vinicius Paschoeto da Silva | RM563089 |
+
+---
+
+# 🔗 Repositório GitHub
+
+https://github.com/LucasViana130/Sprint1-Cloud
+
+---
+
+# 🎥 Vídeo Demonstrativo
+
+Adicionar link do vídeo após upload no YouTube.
+
+---
+
+# ✅ Status do Projeto
+
+✅ API funcionando em Cloud
+✅ Deploy realizado na Azure
+✅ Docker funcionando
+✅ Swagger publicado
+✅ Persistência implementada
+✅ Scripts Azure CLI implementados
+✅ Projeto pronto para entrega
+
+```
+```
