@@ -1,0 +1,79 @@
+<mxfile host="app.diagrams.net">
+  <diagram name="Page-1" id="pZWblmbkyqfEqdgcyQK0">
+    <mxGraphModel dx="1551" dy="857" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="6vnr2oBhn2TrxPiASniv-32" edge="1" parent="1" source="6vnr2oBhn2TrxPiASniv-19" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="6vnr2oBhn2TrxPiASniv-23" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="6vnr2oBhn2TrxPiASniv-19" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="" vertex="1">
+          <mxGeometry height="150" width="261" x="28" y="420" as="geometry" />
+        </mxCell>
+        <mxCell id="6vnr2oBhn2TrxPiASniv-30" edge="1" parent="1" source="6vnr2oBhn2TrxPiASniv-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="6vnr2oBhn2TrxPiASniv-6" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="6vnr2oBhn2TrxPiASniv-3" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="&amp;nbsp; &amp;nbsp;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&amp;nbsp;Acessa Swagger via navegador&amp;nbsp;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="150" width="260" x="20" y="20" as="geometry" />
+        </mxCell>
+        <mxCell id="6vnr2oBhn2TrxPiASniv-1" parent="1" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;fillColor=#1ba1e2;fontColor=#ffffff;strokeColor=#006EAF;" value="User&lt;div&gt;&lt;br&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="60" width="30" x="135" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="6vnr2oBhn2TrxPiASniv-29" edge="1" parent="1" source="6vnr2oBhn2TrxPiASniv-4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="6vnr2oBhn2TrxPiASniv-9" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="6vnr2oBhn2TrxPiASniv-4" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="" vertex="1">
+          <mxGeometry height="150" width="260" x="20" y="220" as="geometry" />
+        </mxCell>
+        <mxCell id="6vnr2oBhn2TrxPiASniv-5" parent="1" style="ellipse;shape=cloud;whiteSpace=wrap;html=1;fillColor=light-dark(#6A00FF,#8902FF);fontColor=#ffffff;strokeColor=#3700CC;" value="" vertex="1">
+          <mxGeometry height="60" width="90" x="105" y="230" as="geometry" />
+        </mxCell>
+        <mxCell id="6vnr2oBhn2TrxPiASniv-6" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="Azure VM" vertex="1">
+          <mxGeometry height="30" width="50" x="125" y="245" as="geometry" />
+        </mxCell>
+        <mxCell id="6vnr2oBhn2TrxPiASniv-7" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="Máquina virtual hospedada  " vertex="1">
+          <mxGeometry height="30" width="120" x="90" y="310" as="geometry" />
+        </mxCell>
+        <mxCell id="6vnr2oBhn2TrxPiASniv-34" edge="1" parent="1" source="6vnr2oBhn2TrxPiASniv-9" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="6vnr2oBhn2TrxPiASniv-15" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="6vnr2oBhn2TrxPiASniv-9" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="" vertex="1">
+          <mxGeometry height="150" width="262" x="389.5" y="220" as="geometry" />
+        </mxCell>
+        <mxCell id="6vnr2oBhn2TrxPiASniv-10" parent="1" style="image;sketch=0;aspect=fixed;html=1;points=[];align=center;fontSize=12;image=img/lib/mscae/Docker.svg;" value="" vertex="1">
+          <mxGeometry height="41" width="50" x="495.5" y="240" as="geometry" />
+        </mxCell>
+        <mxCell id="6vnr2oBhn2TrxPiASniv-11" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="Gerencia containers e volumes" vertex="1">
+          <mxGeometry height="30" width="130" x="455.5" y="300" as="geometry" />
+        </mxCell>
+        <mxCell id="6vnr2oBhn2TrxPiASniv-31" edge="1" parent="1" source="6vnr2oBhn2TrxPiASniv-14" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="6vnr2oBhn2TrxPiASniv-19" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="6vnr2oBhn2TrxPiASniv-14" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="" vertex="1">
+          <mxGeometry height="150" width="261" x="389.5" y="420" as="geometry" />
+        </mxCell>
+        <mxCell id="6vnr2oBhn2TrxPiASniv-15" parent="1" style="image;aspect=fixed;html=1;points=[];align=center;fontSize=12;image=img/lib/azure2/compute/Azure_Spring_Cloud.svg;" value="" vertex="1">
+          <mxGeometry height="40" width="40" x="500.5" y="430" as="geometry" />
+        </mxCell>
+        <mxCell id="6vnr2oBhn2TrxPiASniv-16" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="Spring Boot API&lt;br&gt;Java 21&lt;br&gt;Swagger&lt;br&gt;Porta 8080" vertex="1">
+          <mxGeometry height="30" width="110" x="465" y="500" as="geometry" />
+        </mxCell>
+        <mxCell id="6vnr2oBhn2TrxPiASniv-18" parent="1" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;fillColor=light-dark(#FFFFFF,#FF8000);" value="" vertex="1">
+          <mxGeometry height="65" width="60" x="128.5" y="430" as="geometry" />
+        </mxCell>
+        <mxCell id="6vnr2oBhn2TrxPiASniv-21" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="&lt;div&gt;Docker Volume&lt;/div&gt;&lt;div&gt;h2-data&lt;/div&gt;&lt;div&gt;Persistência dos dados do banco&lt;/div&gt;" vertex="1">
+          <mxGeometry height="60" width="195" x="61" y="495" as="geometry" />
+        </mxCell>
+        <mxCell id="6vnr2oBhn2TrxPiASniv-22" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="" vertex="1">
+          <mxGeometry height="150" width="261" x="28" y="630" as="geometry" />
+        </mxCell>
+        <mxCell id="6vnr2oBhn2TrxPiASniv-23" parent="1" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;" value="" vertex="1">
+          <mxGeometry height="65" width="60" x="128.5" y="640" as="geometry" />
+        </mxCell>
+        <mxCell id="6vnr2oBhn2TrxPiASniv-24" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="H2 Database&lt;br&gt;Persistente" vertex="1">
+          <mxGeometry height="60" width="195" x="61" y="705" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
